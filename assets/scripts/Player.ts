@@ -1,14 +1,11 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, input, Input, Node, tween } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('Player')
 export class Player extends Component {
-    start() {
-
-    }
-
-    update(deltaTime: number) {
-        
-    }
+    direction: direction;
+    BulletPoint: Node;
+    BulletReady: Boolean = false;
 }
-
+
+type direction = 'LEFT' | 'RIGHT';
